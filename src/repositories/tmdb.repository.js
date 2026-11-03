@@ -2,7 +2,7 @@ const { tmdbConfig } = require("../config/tmdb.config.js");
 
 async function getPlayingMoviesRepository() {
     try {
-        const url = tmdbConfig.playingMoviesUrl + `api_key=${tmdbConfig.tmdbApiKey}`;
+        const url = tmdbConfig.playingMoviesUrl + `?api_key=${tmdbConfig.tmdbApiKey}`;
 
         const playingMovies = await fetch(url , {
             method: 'GET'
@@ -14,8 +14,6 @@ async function getPlayingMoviesRepository() {
         
         const response = await playingMovies.json();
 
-        console.log(typeof response);
-
         return response;
 
     } catch (error) {
@@ -25,7 +23,7 @@ async function getPlayingMoviesRepository() {
 
 async function getPopularMoviesRepository() {
     try {
-        const url = tmdbConfig.popularMoviesUrl + `api_key=${tmdbConfig.tmdbApiKey}`;
+        const url = tmdbConfig.popularMoviesUrl + `?api_key=${tmdbConfig.tmdbApiKey}`;
 
         const popularMovies = await fetch(url , {
             method : "GET"
@@ -46,7 +44,7 @@ async function getPopularMoviesRepository() {
 
 async function getTopMoviesRepository() {
     try {
-        const url = tmdbConfig.topMoviesUrl + `api_key=${tmdbConfig.tmdbApiKey}`;
+        const url = tmdbConfig.topMoviesUrl + `?api_key=${tmdbConfig.tmdbApiKey}`;
 
         const topMovies = await fetch(url , {
             method : "GET"
@@ -67,7 +65,7 @@ async function getTopMoviesRepository() {
 
 async function getUpcomingMoviesRepository() {
     try {
-        const url = tmdbConfig.upcomingMoviesUrl + `api_key=${tmdbConfig.tmdbApiKey}`;
+        const url = tmdbConfig.upcomingMoviesUrl + `?api_key=${tmdbConfig.tmdbApiKey}`;
 
         const upcomingMovies = await fetch(url , {
             method : "GET"
