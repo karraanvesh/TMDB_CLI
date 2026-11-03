@@ -12,7 +12,14 @@
 
 `npm install`
 
-4. Run the index.js
+4. Create a .env file in your project root directory and add the following environment variables:
+
+- Your TMDB API key, which you can obtain from your TMDB profile.
+- The API URLs for the following movie categories: Now Playing, Popular, Top Rated, and Upcoming.
+
+Refer to the [TMDB CLI project requirements](https://roadmap.sh/projects/tmdb-cli) for the API endpoint details.
+
+5. Run the index.js
 
 `Below are the list of commands to run the project`
 
