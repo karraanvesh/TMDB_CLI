@@ -9,10 +9,12 @@ async function getPlayingMoviesRepository() {
         });
 
         if(!playingMovies.ok) {
-            throw new Error("Something went wrong")
+            throw new Error(`HTTP Error Status: ${playingMovies.status}`);
         }
         
         const response = await playingMovies.json();
+
+        console.log(typeof response);
 
         return response;
 
